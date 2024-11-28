@@ -1,0 +1,70 @@
+/* Estilo personalizado para os botões */
+.btn-custom-view, .btn-custom-download, .btn-custom-response, .btn-custom-back {
+    font-size: 16px;
+    padding: 15px 30px; /* Aumentando o tamanho para uniformizar */
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    width: 100%; /* Para que ocupe toda a largura disponível */
+    max-width: 300px; /* Limita a largura dos botões */
+    margin-top: 5px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centraliza os botões */
+}
+
+/* Estilo específico para o botão de visualizar */
+.btn-custom-view {
+    background-color: #455686;
+    color: white;
+    border: none;
+}
+
+.btn-custom-view:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Estilo específico para o botão de download */
+.btn-custom-download {
+    background-color: #3d8b32;
+    color: white;
+    border: none;
+}
+
+.btn-custom-download:hover {
+    background-color: #466b4f;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Estilo para o botão de resposta */
+.btn-custom-response {
+    background-color: #4CAF50; /* Cor do botão responder */
+    color: white;
+    border: none;
+}
+
+.btn-custom-response:hover {
+    background-color: #45a049;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Estilo para o botão de voltar */
+.btn-custom-back {
+    background-color: #46403f; /* Cor do botão voltar */
+    color: white;
+    border: none;
+}
+
+.btn-custom-back:hover {
+    background-color: #e53935;
+    color: white;
+    opacity: 0.8;
+}

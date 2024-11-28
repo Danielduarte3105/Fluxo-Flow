@@ -1,0 +1,136 @@
+/* Ajuste do body e html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper do conteúdo para respeitar header e footer */
+#content {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Evita que o conteúdo estoure a área disponível */
+}
+
+/* Estilo básico do aside */
+.aside-menu {
+    background: linear-gradient(135deg, #dedee0, #f7f7f8);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 540;
+    color: #333;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s ease, background-color 0.3s;
+    width: 250px;
+    padding: 20px;
+    position: relative; /* Mantém no fluxo do layout */
+    height: auto;
+    max-height: 100%; /* Garante que o menu não ultrapasse o viewport */
+    overflow-y: auto; /* Permite rolagem se o menu for maior que o espaço disponível */
+}
+
+/* Efeito oculto */
+.aside-menu.hidden {
+    transform: translateX(-100%);
+}
+
+/* Título centralizado */
+.aside-menu h5 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Lista de navegação */
+.aside-menu ul.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Itens da lista */
+.aside-menu ul.nav li {
+    margin-bottom: 10px;
+}
+
+/* Links do menu */
+.aside-menu ul.nav li a {
+    text-decoration: none;
+    color: #444;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Ícones */
+.aside-menu ul.nav li a i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover */
+.aside-menu ul.nav li a:hover {
+    background-color: #ffffff;
+    color: #fff;
+    box-shadow: 0 2px 3px rgba(76, 100, 126, 0.5);
+    transform: translateX(10px);
+}
+
+.aside-menu ul.nav li a:hover i {
+    transform: rotate(20deg);
+}
+
+/* Link "Sair" com cor diferenciada */
+.aside-menu ul.nav li a.text-danger:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 3px rgba(141, 81, 87, 0.5);
+}
+
+/* Responsividade para o menu */
+@media (max-width: 768px) {
+    .aside-menu {
+        width: 200px;
+    }
+
+    .aside-menu ul.nav li a {
+        font-size: 0.9rem;
+    }
+
+    .aside-menu ul.nav li a i {
+        font-size: 1rem;
+    }
+}
+
+/* Estilização do header */
+header {
+    height: 64px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Ajuste do main */
+main {
+    flex: 1;
+    padding: 20px; /* Espaçamento interno */
+    overflow-y: auto; /* Permite rolagem no conteúdo */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
+    background: #fff;
+}
+
+/* Ajuste do footer */
+footer {
+    text-align: center; /* Centraliza o texto no footer */
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    height: 64px;
+}
